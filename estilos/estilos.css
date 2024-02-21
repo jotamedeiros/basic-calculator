@@ -78,6 +78,7 @@ main {
 
 .div-display p {
     text-align: right;
+    margin-right: 5px;
 }
 
 .div-keys {
@@ -90,9 +91,24 @@ main {
 }
 
 .tecla {
+    font-size: 1.1rem;
     width: 50px;
     height: 50px;
     background-color: rgb(170, 170, 170);
     border: 3px solid rgb(70, 70, 70);
     border-radius: 10px;
+    cursor: pointer;
+}
+
+.tecla:hover {
+    background-color: rgb(221, 221, 221);
+}
+
+.tecla-op {
+    background-color: rgb(255, 110, 110) !important;
+    border-color: #800 !important;
+}
+
+.tecla-op:hover {
+    background-color: rgb(247, 60, 60) !important;
 }
