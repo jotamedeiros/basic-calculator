@@ -1,6 +1,6 @@
 const teclasNum = [...document.querySelectorAll('.num')]
 const teclasOp = [...document.querySelectorAll('.op')]
-const teclaRes = document.querySelector('.res')
+const teclaIgual = document.querySelector('.res')
 const teclaCopy = document.querySelector('#tCpy')
 const teclaLimpar = document.querySelector('#tLimpar')
 const display = document.querySelector('#display')
@@ -44,4 +44,21 @@ teclasOp.map((el, i) => {
             }
         }
     })
+})
+
+teclaLimpar.addEventListener('click', (evt) => {
+    sinal = false
+    decimal = false
+    display.innerHTML = 0
+})
+
+teclaIgual.addEventListener('click', (evt) => {
+    sinal = false
+    decimal = false
+    const res = eval(display.innerHTML)
+    display.innerHTML = res
+})
+
+teclaCopy.addEventListener('click', (evt) => {
+    navigator.clipboard.writeText(display.innerHTML)
 })
