@@ -29,3 +29,19 @@ teclasNum.map((el, i) => {
         }
     })
 })
+
+teclasOp.map((el, i) => {
+    el.addEventListener('click', (evt) => {
+        if (!sinal) {
+            sinal = true
+            if (display.innerHTML == '0') {
+                display.innerHTML = ''
+            }
+            if (evt.target.innerHTML == 'x') {
+                display.innerHTML += '*'
+            } else {
+                display.innerHTML += evt.target.innerHTML
+            }
+        }
+    })
+})
